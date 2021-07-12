@@ -4,23 +4,26 @@ window.addEventListener("load", () => {
         let dverde = document.getElementById("verde");
         let damarelo = document.getElementById("amarelo");
         let dvermelho = document.getElementById("vermelho");
-    function verde(){
-    let tempo = 15;
-    setInterval(function(){
+
+        function configurar(elemento, texto, bckcolor, cor) {
+        elemento != "" || texto != "" ? elemento.innerHTML = texto : ""
+        elemento != "" && bckcolor != "" ? elemento.style.backgroundColor = bckcolor : ""
+        elemento != "" && cor != "" ? elemento.style.color = cor : ""
+        }
+        
+        function verde(){
+        let tempo = 15;
+        setInterval(function(){
         if (tempo > -1){
-            dcron.innerHTML = tempo;
-            dcron.style.backgroundColor = "#496914";
-            dcron.style.color = "#fff";
-            dverde.innerHTML = "Boa Viagem";
-            dverde.style.backgroundColor = "#496914";
-            damarelo.innerHTML = "";
-            damarelo.style.backgroundColor = "#333";
-            dvermelho.innerHTML = "";
-            dvermelho.style.backgroundColor = "#333";
+            configurar(dcron,"","#496914", "#fff")
+            dcron.innerHTML = tempo;            
+            configurar(dverde, "Boa Viagem", "#496914", "#fff")
+            configurar(damarelo, "", "#333", "")
+            configurar(dvermelho, "", "#333", "")
         }
         tempo--;
-    },1000);
-    }
+        },1000);
+        }
     verde();
     setTimeout(amarelo,16000);
     setTimeout(vermelho,20000);
@@ -29,15 +32,11 @@ window.addEventListener("load", () => {
             let tempo = 3;
             setInterval(function(){
                 if (tempo > -1){
-                    dcron.innerHTML = tempo;
-                    dcron.style.backgroundColor = "#d1b60d";
-                    dcron.style.color = "#000";
-                    damarelo.innerHTML = "Atenção";
-                    damarelo.style.backgroundColor = "#d1b60d";
-                    dverde.innerHTML = "";
-                    dverde.style.backgroundColor = "#333";
-                    dvermelho.innerHTML = "";
-                    dvermelho.style.backgroundColor = "#333";
+                    configurar(dcron,"","#d1b60d", "#000")
+                    dcron.innerHTML = tempo;            
+                    configurar(dverde, "", "#333", "")
+                    configurar(damarelo, "Atenção", "#d1b60d", "#000")
+                    configurar(dvermelho, "", "#333", "")
                 }
                 tempo--;
             },1000);
@@ -49,15 +48,11 @@ window.addEventListener("load", () => {
             let tempo = 15;
             setInterval(function(){
                 if (tempo > -1){
-                    dcron.innerHTML = tempo;
-                    dcron.style.backgroundColor = "#9e0b0f";
-                    dcron.style.color = "#fff";
-                    dvermelho.innerHTML = "Pare";
-                    dvermelho.style.backgroundColor = "#9e0b0f";
-                    damarelo.innerHTML = "";
-                    damarelo.style.backgroundColor = "#333";
-                    dverde.innerHTML = "";
-                    dverde.style.backgroundColor = "#333";
+                    configurar(dcron,"","#9e0b0f", "#fff")
+                    dcron.innerHTML = tempo;            
+                    configurar(dverde, "", "#333", "")
+                    configurar(damarelo, "", "#333", "")
+                    configurar(dvermelho, "Pare", "#9e0b0f", "#fff")
                 }
                 tempo--;
             },1000);
