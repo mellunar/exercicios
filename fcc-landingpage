@@ -1,0 +1,405 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FCC Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #1e1f20;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #1e1f20;
+}
+
+header .hcont {
+  height: inherit;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  display: flex;
+}
+
+#header-img {
+  width: auto;
+  height: 40px;
+}
+
+#nav-bar {
+  color: #f8bfc7;
+  margin-left: auto;
+  font-size: 14px;
+}
+
+#nav-bar ul{
+  list-style: none;
+  display: flex;
+}
+
+.nav-link {
+  display: inline-block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f8bfc7;
+  padding: 1rem;
+}
+
+.nav-link:hover{
+  color: #1e1f20;
+  background-color: #f8bfc7;
+}
+
+@media screen and (max-width: 1229px) {
+  .al {
+    margin-left: 10px;
+  }
+}
+
+h2 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+#overview {
+  background: url(https://live.staticflickr.com/65535/51347805213_a1cc4e31d6_o.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1920px;
+  min-width: 100%;
+  min-height: 1080px;
+  overflow: hidden;
+  text-align: center;
+  text-shadow: 0px 0px #aaa;
+}
+#ovtt{
+  padding-top: 5%;
+}
+#ovp {
+  padding-top: 0.5rem;
+}
+
+.secgrid {
+  margin-top: 15px;
+  padding: 0 15px;
+  display: grid;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 15px;
+}
+.icn {
+  color: #cc7c83;
+}
+.ln1 {
+  line-height: 1.3em;
+  text-align: center;
+  padding: 15px;
+}
+
+#features2 {
+  margin-top: 15px;
+  padding: 0 15px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto, auto;
+  grid-gap: 15px;
+  grid-template-areas: "port port night night"
+    "pic1 pic2 pic3 pic4"
+}
+.port {
+  grid-area: port;
+}
+.night {
+  grid-area: night;
+}
+.pic1{
+  background: url(https://live.staticflickr.com/65535/51348701155_dd14ab2359_k.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 657px;
+  grid-area: pic1;
+}
+.pic2{
+  background: url(https://live.staticflickr.com/65535/51348572189_b8e471753a_o.jpg);
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  grid-area: pic2;
+}
+.pic3{
+  background: url(https://live.staticflickr.com/65535/51348585494_6ff08863ed_o.jpg);
+  background-size: cover;
+  background-position: right;
+  height: auto;
+  grid-area: pic3;
+}
+.pic4{
+  background: url(https://live.staticflickr.com/65535/51347849781_c83500f07d_o.jpg);
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  grid-area: pic4;
+}
+
+.ft3 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr; 
+  align-items: center; 
+}
+#video {
+  width: 100%;
+  height: auto;
+}
+
+#specs {
+  width: 100%;  
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto; 
+}
+#tsp {
+  text-align: center;
+  padding-bottom: inherit;
+  grid-area: 1/1/2/3;
+}
+.ln2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat (3, auto);
+  grid-gap: 8px;
+}
+h6 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#newsletter {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid #cc7c83;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+#form {
+  text-align: center;
+}
+.ssss {
+  margin-bottom: 7px;
+}
+#email {
+  border: 1px solid #cc7c83;
+  border-radius: 2.3rem;
+  width: 20rem;
+  height: 2.3rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+}
+#submit {
+  border: 1px solid #1e1f20;
+  background-color: #1e1f20;
+  color: #fff;
+  border-radius: 2.3rem;
+  width: 5rem;
+  height: 2.3rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+}
+#submit:hover {
+  border-color: #545454;
+  background-color: #545454;
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1600px) {
+  section#overview {
+    min-height: 900px;
+  }
+  #features2 .pic1{
+  height: 544px;
+}
+}
+
+@media screen and (max-width: 1599px) and (min-width: 1440px) {
+  section#overview {
+    min-height: 800px;
+  }
+  #features2 .pic1{
+  height: 544px;
+}
+}
+
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+  h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+  h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+  h6 {
+    font-size: 16px;
+  }
+  section#overview {
+  min-height: 720px;
+  }
+  #features2 .pic1{
+  height: 430px;
+}
+}
+  
+@media screen and (max-width: 1279px) {
+  section#overview {
+    min-height: 600px;
+  }
+  body {
+    font-size: 16px;
+  }
+  h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+  h3 {
+  font-size: 22px;
+  font-weight: 400;
+}
+  h6 {
+    font-size: 16px;
+  }
+  #features2 .pic1{
+  height: 339px;
+}  
+  .ln1{
+    line-height: 0.9em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ovtt{
+  padding-top: 9%;
+}
+  .secgrid {
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+}
+  #features2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "port port"
+  "pic1 pic2"
+  "night night"
+  "pic3 pic4";
+}
+  #features2 .pic1{
+  height: 544px;
+}
+  #features2 .pic3{
+  height: 544px;
+}
+  .ln1 {
+    line-height: 0.9em;
+  }
+}
+</style>
+
+<header id="header">
+  <div class="hcont">
+    <a class="al" href="#nogo"><img id="header-img" src="https://live.staticflickr.com/65535/51342503017_273d7c6d2d_o.png" alt="logo"/></a>
+  <nav id="nav-bar">
+    <ul>
+      <li><a href="#overview" class="nav-link">Overview</a></li>
+      <li><a href="#features" class="nav-link">Features</a></li>
+      <li><a href="#techspecs" class="nav-link">Tech Specs</i></a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+<main>
+  <section id="overview">
+    <h2 id="ovtt">The phone of the future is here</h2>
+    <h3>Better, faster and stronger</h3>
+    <p id="ovp">Najo 2 is out starting at $400</p>
+  </section>
+  <section id="features" class="secgrid">
+    <div class="ln1"><h3><i class="bi bi-broadcast-pin icn"></h3></i><br><h2>5G ready</h2><br><h3>Get the fastest connection anywhere with the best global coverage</h3></div>
+    <div class="ln1"><h3><i class="bi bi-camera icn"></h3></i><br><h2>DSLR-like camera</h2><br><h3>Your pictures with the best quality possible</h3></div>
+  </section>
+  <section id="features2">
+    <div class="port ln1"><h3><i class="bi bi-aspect-ratio icn"></h3></i><br><h2>Portrait Mode</h2><br><h3>Professional personal pictures with one click</h3></div>
+    <div class="night ln1"><h3><i class="bi bi-moon-stars icn"></h3></i><br><h2>Night Mode</h2><br><h3>Never miss a detail even at night</h3></div>
+    <div class="pic1"></div>
+    <div class="pic2"></div>
+    <div class="pic3"></div>
+    <div class="pic4"></div>
+  </section>
+  <section class="secgrid">
+    <div class="ft3">
+      <div class="ln1"><h3><i class="bi bi-badge-4k icn"></i></h3></i><br><h2>Record in 4k</h2><br><h3>Never miss any details</h3></div>
+      <div class="ln1"><h3><i class="bi bi-battery-full icn"></i></h3></i><br><h2>Over 3 days of power</h2><br><h3>6000 mAh battery</h3></div>
+    </div>
+    <div><video id="video" controls><source src="https://live.staticflickr.com/video/51349864956/f9ab28e2a8/1080p.mp4?s=eyJpIjo1MTM0OTg2NDk1NiwiZSI6MTYyNzgyODc3MiwicyI6IjJkZDdmOTA2OTlhZGVjZTllYjIyYWFmMDJlYWMyNTg4NTE3MGI2N2UiLCJ2IjoxfQ" type="video/mp4"></video></div>
+  </section>
+  <section id="techspecs" class="secgrid">
+    <div id="specs">
+      <div id="tsp"><h2>Technical Specifications</h2></div>
+      <div class="ln2">
+        <div><h6>Storage Capacity</h6></div>
+        <div>64GB<br>128GB<br>256GB</div>
+        <div><h6>RAM</h6></div>
+        <div>4GB<br>6GB<br>8GB</div>
+        <div><h6>Processor</h6></div>
+        <div>Snapdragon 865 5G<br>Snapdragon 888 5G</div>
+      </div>
+      <div class="ln2">
+        <div><h6>Display</h6></div>
+        <div>5.4"<br>6.1"</div>
+        <div><h6>Operating System</h6></div>
+        <div>Clean Android 12</div>
+        <div><h6>SIM Card</h6></div>
+        <div>Dual-SIM (nano-SIM)</div>
+      </div>
+    </div>
+    <div id="newsletter">      
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <h3 class="ssss">Subscribe to our newsletter</h3>
+        <input id="email" type="email" id="email" name ="email" placeholder="enter your email" required />
+        <input type="submit" id="submit" value="submit" />
+      </form>
+    </div>
+  </section>
+</main>
